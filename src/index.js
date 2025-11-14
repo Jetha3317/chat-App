@@ -14,7 +14,7 @@ function createMainWindow(){
         }
     });
     mainWin.loadURL(url.format({
-        pathname: path.join(__dirname, 'mainWin.html'),
+        pathname: path.join(__dirname, './mainWin.html'),
         protocol: 'file:',
         slashes: true
     }));
@@ -25,7 +25,7 @@ function createMainWindow(){
 
 ipcMain.on("start-gc", (e, arg) => {
     mainWin.loadURL(url.format({
-        pathname: path.join(__dirname, 'subWin.html'),
+        pathname: path.join(__dirname, './subWin.html'),
         protocol: 'file:',
         slashes: true
     }))
@@ -58,7 +58,7 @@ function createLogWindow(){
         }
     });
     logWin.loadURL(url.format({
-        pathname: path.join(__dirname, 'logWin.html'),
+        pathname: path.join(__dirname, './logWin.html'),
         protocol: 'file:',
         slashes: true
     }));
