@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "electron .",
+    "build": "npm run build:renderer && npm run build:main && electron-builder",
+    "build:renderer": "webpack --mode production",
+    "build:main": "tsc --build tsconfig.main.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "pbhadu",
+  "author": "Jetha",
   "license": "ISC",
   "dependencies": {
     "electron": "^10.1.2",
