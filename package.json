@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  
-  "engines": {
-    "node": ">=18 <21"
-  },
   "scripts": {
     "start": "electron .",
     "build": "npm run build:renderer && npm run build:main && electron-builder",
@@ -20,5 +16,8 @@
     "electron": "^10.1.2",
     "jquery": "^3.5.1",
     "node-notifier": "^8.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.102.1"
   }
 }
